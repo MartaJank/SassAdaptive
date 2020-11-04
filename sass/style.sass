@@ -1,0 +1,76 @@
+@import "variables"
+@import "mixins"
+
+* 
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: "open-sans", sans-serif
+
+body
+    .container 
+    width: 350px
+    height: auto
+    background-color: $secondary-color
+    padding: 60px 45px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    border-radius: 20px
+
+    h2 
+      text-align: center
+      margin-bottom: 20px
+      font: 
+        size: 26px
+        weight: 700
+      
+      color: $primary-color
+
+    h3
+        @extend h2
+        font-size: 16px
+        color: #000
+
+    .form-wrapper 
+      .input_field 
+        margin-bottom: 10px
+        position: relative
+
+        input 
+          width: 100%
+          padding: 12px 0 12px 30px
+          border: none
+          background: #eee
+        
+
+        i 
+          position: absolute
+          top: 12px
+          left: 10px
+          font-size: 14px
+          color: #1d2120
+
+    .button 
+        text-align: center
+        background-color: $primary-color
+        width: 70%
+        margin: 20px auto 0
+        padding: 12px
+        border-radius: 25px
+        opacity: 0.6
+
+        &:hover
+            opacity: 1
+            transition: 1.5s
+
+        a
+            @include link-style($secondary-color)
+
+    .message-container 
+        margin: 20px 0
+        text-align: center
+
+        a 
+          @include link-style($primary-color)
