@@ -6,6 +6,9 @@
 }
 
 body {
+  background-color: #2ec5fa;
+}
+body .container {
   width: 350px;
   height: auto;
   background-color: #fff;
